@@ -293,7 +293,7 @@ void KeyExpansionFibonacci(byte key[4 * Nk], word w[4 * (Nr + 1)])
     // The first four of w [] are input key s
     while (i < Nk)
     {
-        Q[i] = Word(key[4 * i], key[4 * i + 1], key[4 * i + 2], key[4 * i + 3]);
+        Q[i] = Word(key[0+i], key[4+i], key[8+i], key[12+i]);
         i++;
     }
 
