@@ -301,12 +301,11 @@ void KeyExpansionFibonacci(byte key[4 * Nk], word w[4 * (Nr + 1)])
     w[1]=bitset<32>((Q[0].to_ulong()*Q[1].to_ulong()-Q[1].to_ulong())%Q[2].to_ulong());
     i = 2;
 
-    while (i < 4 * (Nr + 1))
+    while (i < 4*(Nr + 1))
     {
         w[i]=bitset<32>((w[i-1].to_ulong()+w[i-2].to_ulong()+3*i)%Q[3].to_ulong());
         ++i;
     }
-
 }
 /******************************Here are the encryption and decryption functions ********************************************************************/
 /**
